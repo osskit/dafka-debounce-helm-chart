@@ -17,7 +17,7 @@ image:
   # -- the image name to use
   name: osskit/dafka-debounce
   # -- the image tag to use
-  tag: "7.6"
+  tag: "0.0"
 
 # -- Allow to specify log level
 logLevel: WARN
