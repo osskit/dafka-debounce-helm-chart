@@ -48,7 +48,7 @@ spec:
             - name: KAFKA_BROKER
               value: {{ .Values.broker }}
             - name: GROUP_ID
-              value: {{ .Values.groupId | default .Release.Name }}
+              value: {{ .Values.groupId | default (printf "%s-dafka-debounce" (.Release.Name))  }}
             - name: SOURCE_TOPIC
               value: {{ .Values.sourceTopic }}
             - name: TARGET_TOPIC
