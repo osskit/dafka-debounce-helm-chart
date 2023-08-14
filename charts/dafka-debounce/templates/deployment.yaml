@@ -61,6 +61,7 @@ spec:
             - name: DEDUPLICATION_OPERATOR
               value: {{ .Values.window.deduplicationOperator }}
           {{- end}}
+  {{- if .Values.partitioning }}
           {{- if .Values.partitioning.outputPartitioningKey }}
             - name: OUTPUT_PARTITIONING_KEY
               value: {{ .Values.partitioning.outputPartitioningKey }}
@@ -69,6 +70,7 @@ spec:
             - name: OUTPUT_PARTITIONING_KEY_FIELDS
               value: {{ .Values.partitioning.outputPartitioningKeyFields }}
           {{- end}}
+  {{- end}}
             - name: USE_PROMETHEUS
               value: {{ .Values.metrics.enabled | squote }}
             - name: MONITORING_SERVER_PORT
