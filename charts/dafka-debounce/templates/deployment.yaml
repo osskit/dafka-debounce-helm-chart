@@ -55,8 +55,18 @@ spec:
               value: {{ .Values.targetTopic }}
             - name: WINDOW_DURATION
               value: {{ .Values.window.duration | squote }}
+  {{- if .Values.window.retentionPeriod  }}
             - name: WINDOW_RETENTION_PERIOD
               value: {{ .Values.window.retentionPeriod | squote }}
+  {{ - end }}
+  {{- if .Values.window.memTableSizeMB  }}
+            - name: TOTAL_MEMTABLE_MB
+              value: {{ .Values.window.memTableSizeMB | squote }}
+  {{ - end }}
+  {{- if .Values.window.offHeapSizeMB  }}
+            - name: TOTAL_OFF_HEAP_SIZE_MB
+              value: {{ .Values.window.offHeapSizeMB | squote }}
+  {{ - end }}
           {{- if .Values.window.deduplicationOperator  }}
             - name: DEDUPLICATION_OPERATOR
               value: {{ .Values.window.deduplicationOperator }}
