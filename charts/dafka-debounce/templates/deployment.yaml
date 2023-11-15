@@ -54,7 +54,7 @@ spec:
             - name: TARGET_TOPIC
               value: {{ .Values.targetTopic }}
             - name: WINDOW_DURATION
-              value: {{ .Values.window.duration | squote }}
+              value: {{ .Values.windowDuration | squote }}
   {{- if .Values.window.retentionPeriod  }}
             - name: WINDOW_RETENTION_PERIOD
               value: {{ .Values.window.retentionPeriod | squote }}

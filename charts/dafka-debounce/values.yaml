@@ -27,15 +27,20 @@ livenessProbe:
   failureThreshold: 3
   periodSeconds: 30
 
+window:
+  retentionPeriod: 600
+  memTableSizeMB: 30
+  offHeapSizeMB: 300  
+
 resources:
   requests:
     # -- cpu requests
     cpu: 200m
     # -- memory requests
-    memory: 200Mi
+    memory: 300Mi
   limits:
     # -- memory limits
-    memory: 400Mi
+    memory: 600Mi
 
 # -- labels to add to the pod metadata
 podLabels:
