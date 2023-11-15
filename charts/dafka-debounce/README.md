@@ -1,6 +1,6 @@
 # dafka-debounce
 
-![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square)
+![Version: 0.0.9](https://img.shields.io/badge/Version-0.0.9-informational?style=flat-square)
 
 A Helm Chart for Dafka Debounce
 
@@ -14,14 +14,17 @@ A Helm Chart for Dafka Debounce
 | broker | string | `nil` | the url of the kafka broker |
 | replicaCount | int | `1` | pod count |
 | image.name | string | `"osskit/dafka-debounce"` | the image name to use |
-| image.tag | string | `"7.6"` | the image tag to use |
+| image.tag | string | `"0.0"` | the image tag to use |
 | logLevel | string | `"WARN"` | Allow to specify log level |
 | livenessProbe.initialDelaySeconds | int | `300` |  |
 | livenessProbe.failureThreshold | int | `3` |  |
 | livenessProbe.periodSeconds | int | `30` |  |
+| window.retentionPeriod | int | `600` |  |
+| window.memTableSizeMB | int | `30` |  |
+| window.offHeapSizeMB | int | `300` |  |
 | resources.requests.cpu | string | `"200m"` | cpu requests |
-| resources.requests.memory | string | `"200Mi"` | memory requests |
-| resources.limits.memory | string | `"400Mi"` | memory limits |
+| resources.requests.memory | string | `"300Mi"` | memory requests |
+| resources.limits.memory | string | `"600Mi"` | memory limits |
 | podLabels | string | `nil` | labels to add to the pod metadata |
 | metrics.enabled | bool | `true` | should prometheus scrape this server |
 | metrics.path | string | `"/metrics"` | a path prometheus should scrape metrics from |
