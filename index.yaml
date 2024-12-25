@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   dafka-debounce:
   - apiVersion: v1
+    created: "2024-12-25T08:06:17.144583934Z"
+    description: A Helm Chart for Dafka Debounce
+    digest: 28efcd61bdc93bc8538502cf96c84a8c8ee8c0e77c4d0669967f5d4d179ece25
+    name: dafka-debounce
+    urls:
+    - https://github.com/osskit/dafka-debounce-helm-chart/releases/download/dafka-debounce-0.0.11/dafka-debounce-0.0.11.tgz
+    version: 0.0.11
+  - apiVersion: v1
     created: "2024-12-24T15:20:48.730873309Z"
     description: A Helm Chart for Dafka Debounce
     digest: 7edbc7561b35890ad952d4fd7bffc7f375a429a3554e1def477916ae379ab9ba
@@ -73,4 +81,4 @@ entries:
     urls:
     - https://github.com/osskit/dafka-debounce-helm-chart/releases/download/dafka-debounce-0.0.2/dafka-debounce-0.0.2.tgz
     version: 0.0.2
-generated: "2024-12-24T15:20:48.730918123Z"
+generated: "2024-12-25T08:06:17.144651814Z"
